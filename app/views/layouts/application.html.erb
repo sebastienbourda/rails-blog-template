@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>HelloWorld</title>
+    <title>The Best Blog Ever</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -12,12 +12,13 @@
   </head>
 
   <body>
-    <%= render "shared/disclaimer" %>
-
     <%= render "shared/notice" %>
 
-    <main class="container mx-auto mt-28 px-5 w-full">
+    <%= render "shared/header" %>
+
+    <main class="min-h-screen mt-28 px-8 w-full">
       <%= yield %>
     </main>
+
   </body>
 </html>

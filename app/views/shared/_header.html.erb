@@ -1,0 +1,25 @@
+<header class="flex justify-between w-full p-8">
+  <div>
+    <%= link_to root_path do %>
+      <h1 class="text-xl font-bold">The Best Blog Ever</h1>
+    <% end %>
+  </div>
+
+  <ul class="flex gap-4 items-center">
+    <% if signed_in? %>
+      <li>
+        <%= link_to "New post", new_post_path %>
+      </li>
+      <li>
+        <%= link_to "Log out", logout_path, method: :delete, class: "" %>
+      </li>
+    <% else %>
+      <li>
+        <%= link_to "Log in", login_path, class: "" %>
+      </li>
+      <li>
+        <%= link_to "Sign up", new_signup_path, class: "" %>
+      </li>
+    <% end %>
+  </ul>
+</header>

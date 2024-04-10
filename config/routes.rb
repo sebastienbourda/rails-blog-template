@@ -16,4 +16,7 @@ Rails.application.routes.draw do
 
   # Reset password routes
   resources :password_resets, only: [:new, :create, :edit, :update]
+
+  # Posts routes
+  resources :posts, slug: :slug
 end

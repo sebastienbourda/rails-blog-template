@@ -1,0 +1,28 @@
+<div id="<%= dom_id post %>">
+  <p class="my-5 text-3xl font-bold flex flex-col gap-2">
+    <%= post.title %>
+    <span class="inline-flex w-fit items-center rounded-full bg-gray-50 px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
+      <%= post.created_at.strftime("%B %d, %Y") %>
+    </span>
+  </p>
+
+  <% if signed_in? %>
+    <div class="mb-16">
+      <%= link_to "Edit this post", edit_post_path(post), class: " rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+      <div class="inline-block ml-2">
+        <%= button_to "Destroy this post", post_path(post), method: :delete, class: " rounded-lg py-3 px-5 bg-gray-100 font-medium" %>
+      </div>
+      <%= link_to "Back to posts", posts_path, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    </div>
+  <% end %>
+
+  <div class="text-lg">
+    <%= post.content %>
+  </div>
+
+  <% if action_name != "show" %>
+    <%= link_to "Show this post", post, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to "Edit this post", edit_post_path(post), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
+    <hr class="mt-6">
+  <% end %>
+</div>

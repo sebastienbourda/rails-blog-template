@@ -1,4 +1,4 @@
-<header class="flex justify-between w-full p-8">
+<header class="flex flex-col justify-between w-full p-8 md:flex-row">
   <div>
     <%= link_to root_path do %>
       <h1 class="text-xl font-bold">The Best Blog Ever</h1>
@@ -13,11 +13,16 @@
       <li>
         <%= link_to "Log out", logout_path, method: :delete, class: "" %>
       </li>
+    <% else %>
+      <li>
+        <%= link_to "Log in", login_path, class: "" %>
+      </li>
       <% if ENV["SIGNUP_ENABLED"] == "true" %>
         <li>
           <%= link_to "Sign up", new_signup_path, class: "" %>
         </li>
       <% end %>
     <% end %>
+
   </ul>
 </header>

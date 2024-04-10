@@ -45,7 +45,9 @@ bin/dev
 
 - Visit `http://localhost:3000` in your browser
 
-- Pass ```SIGN_UP_ENABLED=true``` in .env to enable sign up.
+- Create .env file and add the following variable
+
+- ```SIGN_UP_ENABLED=true``` to enable sign up
 
   > !!! WARNING: Enable sign up in production only to create the first user (you), then disable it. !!!
 

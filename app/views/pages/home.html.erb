@@ -2,11 +2,11 @@
 <section class="mt-8">
   <ul class="space-y-8">
     <% @posts.each do |post| %>
-      <li class="text-3xl font-bold flex items-center gap-2">
-        <%= link_to post do %>
+      <li class="text-xl font-bold flex items-center gap-2 md:text-3xl">
+        <%= link_to post, class: "sm:flex sm:items-center transition delay-150 ease-in-out sm:gap-2 hover:text-red-600" do %>
           <%= post.title %>
           <% if signed_in? %>
-            <span class="inline-flex items-center rounded-full bg-gray-50 px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
+            <span class="ml-2 inline-flex items-center rounded-full bg-gray-50 px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
               <%= post.status %>
             </span>
           <% end %>

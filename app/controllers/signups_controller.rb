@@ -1,4 +1,6 @@
 class SignupsController < ApplicationController
+  before_action :check_ENV, only: [:new, :create]
+
   def new
     @user = User.new
   end

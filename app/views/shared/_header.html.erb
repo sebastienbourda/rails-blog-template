@@ -13,13 +13,11 @@
       <li>
         <%= link_to "Log out", logout_path, method: :delete, class: "" %>
       </li>
-    <% else %>
-      <li>
-        <%= link_to "Log in", login_path, class: "" %>
-      </li>
-      <li>
-        <%= link_to "Sign up", new_signup_path, class: "" %>
-      </li>
+      <% if ENV["SIGNUP_ENABLED"] == "true" %>
+        <li>
+          <%= link_to "Sign up", new_signup_path, class: "" %>
+        </li>
+      <% end %>
     <% end %>
   </ul>
 </header>

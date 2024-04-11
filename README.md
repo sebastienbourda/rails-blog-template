@@ -48,7 +48,7 @@ bin/dev
 
 - Create .env file and add the following variable
 
-- ```SIGN_UP_ENABLED=true``` to enable sign up
+- ```SIGNUP_ENABLED="true"``` to enable sign up
 
   > !!! WARNING: Enable sign up in production only to create the first user (you), then disable it. !!!
 

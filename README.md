@@ -14,7 +14,7 @@
 
 
 ## Features
-- User authentication for users (sign up, sign in, sign out). Sign up able/disable by ENV variable.
+- User authentication for users (sign up, sign in, sign out). Signup enable/disable by ENV variable.
 - Create, edit, delete, and view posts.
 - Trix editor for rich text editing in posts.
 
@@ -39,6 +39,7 @@ rails db:create db:migrate
 ```
 
 - Run to build the frontend and start the server
+
 ```bash
 bin/dev
 ```
